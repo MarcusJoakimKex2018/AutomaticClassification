@@ -1,4 +1,9 @@
-# Classification template
+# -*- coding: utf-8 -*-
+"""
+@author: Marcus Östling, Joakim Lilja
+
+Assess the classifiers
+"""
 
 # Importing the libraries
 import numpy as np
@@ -19,7 +24,7 @@ labelencoder_y = LabelEncoder()
 y = labelencoder_y.fit_transform(y)
 
 # Feature Scaling
-from sklearn.preprocessing import StandardScaler # KOLLA UPP DENNA
+from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X = sc.fit_transform(X)
 
@@ -75,7 +80,7 @@ if(True): # TEST JUST ONE
     sys.exit()
   '''     
 
-for it in range(1):
+for it in range(10): # amount of runs for each classifiers.
     # Splitting the dataset into the Training set and Test set
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3)#, random_state = 0)
     for i in range(len(classifiers)):
