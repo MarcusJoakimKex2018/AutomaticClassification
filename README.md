@@ -1,6 +1,6 @@
 # AutomaticClassification
 Code base for the study "Automatic classification of neurons by their morphology"
-
+ 
 # Code
 ## getData.py
 Gathers the data from neuromorpho.org
