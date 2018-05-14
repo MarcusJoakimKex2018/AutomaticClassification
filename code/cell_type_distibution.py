@@ -4,31 +4,27 @@
 
 Cell type accuracy distribution
 
-Draw the histograms for each classifier.
-Data from ../data/after1000runs.json
+Draw the histograms for each cell type.
 """
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from collections import Counter
 
-'''
-# Using sypder the file '../data/after1000runs.json' was
-# copied into data as code.
-with open('../data/after1000runs.json', 'r') as myfile:
-    data2=myfile.read().replace('\n', '')
+dataset = pd.read_csv('../data/mouse.csv')
+cols = dataset.shape[1]
+cell_types = dataset.iloc[:, cols-1].values.tolist()
 
-data = eval(data2)
-'''
+number_of_cells = dict(Counter(cell_types))
 
 names = []
 values = []
 
-ditems = list(data.keys())
-for k,v in data[ditems[0]].items():
+for k,v in number_of_cells.items():
     names.append(k)
-    values.append(v[0]+v[1])
-    print(k, str(v[0]+v[1]))
+    values.append(v)
+    print(k, str(v))
 
 plt.xticks(rotation=-90)
 plt.gcf().subplots_adjust(bottom=0.40)
