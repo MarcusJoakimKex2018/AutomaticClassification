@@ -26,8 +26,9 @@ for k,v in number_of_cells.items():
     values.append(v)
     print(k, str(v))
 
+plt.rc('font', size=24)
 plt.xticks(rotation=-90)
-plt.gcf().subplots_adjust(bottom=0.40)
+plt.gcf().subplots_adjust(bottom=0.50)
 plt.bar(names, values, align='center')
 plt.title("Cell type distribution")
 plt.ylabel('Number of cells')
