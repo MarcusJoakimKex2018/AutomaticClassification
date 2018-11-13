@@ -1,5 +1,8 @@
 # AutomaticClassification
 Code base for the study "Automatic classification of neurons by their morphology"
+
+## Url to the thesis
+http://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1214317&dswid=-2523
  
 # Code
 ## getData.py
